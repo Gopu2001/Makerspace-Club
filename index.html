@@ -48,21 +48,46 @@
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
         }
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
         </style>
     </head>
     <body>
         <!-- Side navigation -->
         <div class="sidenav">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <img src="BUILD.JPG" class="center"></img>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contacts">Contact</a>
         </div>
 
         <!-- Page content -->
         <div class="main">
-            <h1>TRACY HIGH'S MAKERSPACE CLUB</h1>
-            <img src="octopus.gif">
+            <div id="about">
+                <h1>TRACY HIGH'S MAKERSPACE CLUB</h1>
+                <img src="octopus.gif">
+            </div>
+            <div id="services">
+                <p>You may <a href="#contacts">contact us</a> to make an appointment for your 3D printing needs.<br><br>
+                For more information on what we have done: check out these amazing 3D prints!
+                </p>
+                <img src="projects/IMG_4333.JPG" width="33%"></img>
+                <img src="projects/IMG_4345.JPG" width="33%"></img>
+                <img src="projects/IMG_4358.JPG" width="33%"></img>
+                <img src="projects/IMG_4365.JPG" width="33%"></img>
+                <img src="projects/IMG_4370.JPG" width="33%"></img>
+                <img src="projects/IMG_4396.JPG" width="33%"></img>
+                <img src="projects/IMG_4400.JPG" width="33%"></img>
+                <img src="projects/IMG_4403.JPG" width="33%"></img>
+            </div>
+            <div id="contacts">
+                <h2>Contact</h2>
+                <p>Email: Mr. Ryan Wasurick at <a href="mailto:rwasurick@tusd.net">rwasurick@tusd.net</a> for more information</p>
+            </div>
         </div>
     </body>
 </html>
