@@ -13,7 +13,7 @@
         /* The sidebar menu */
         .sidenav {
           height: 100%; /* Full-height: remove this if you want "auto" height */
-          width: 15%; /* Set the width of the sidebar */
+          width: 140px; /* Set the width of the sidebar */
           position: fixed; /* Fixed Sidebar (stay in place on scroll) */
           z-index: 1; /* Stay on top */
           top: 0; /* Stay at the top */
@@ -21,13 +21,14 @@
           background-color: #111; /* Black */
           overflow-x: hidden; /* Disable horizontal scroll */
           padding-top: 20px;
+	  font-size: 48px;
         }
 
         /* The navigation menu links */
         .sidenav a {
           padding: 6px 8px 6px 16px;
           text-decoration: none;
-          font-size: 25px;
+          font-size: 28px;
           color: #818181;
           display: block;
         }
@@ -35,6 +36,7 @@
         /* When you mouse over the navigation links, change their color */
         .sidenav a:hover {
           color: #f1f1f1;
+	  font-size: 32px;
         }
 
         /* Style page content */
@@ -44,15 +46,106 @@
         }
 
         /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-        @media screen {
+	      @media screen and max-height = 450px {
           .sidenav {padding-top: 8px}
-          .sidenav a {font-size: 18px;}
+          .sidenav a {font-size: 28px;}
         }
         .center {
           display: block;
           margin-left: auto;
           margin-right: auto;
-          width: 50%;
+          width: 75%;
+        }
+	.centerss {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+        * {
+          box-sizing: border-box;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
         }
         </style>
     </head>
@@ -69,25 +162,114 @@
         <div class="main">
             <div id="about">
                 <h1>TRACY HIGH'S MAKERSPACE CLUB</h1>
-                <img src="octopus.gif">
+                <img src="octopus.gif" width=50%>
             </div>
             <div id="services">
                 <p>You may <a href="#contacts">contact us</a> to make an appointment for your 3D printing needs.<br><br>
                 For more information on what we have done: check out these amazing 3D prints!
                 </p>
-                <img src="projects/IMG_4333.JPG" width="33%"></img>
-                <img src="projects/IMG_4345.JPG" width="33%"></img>
-                <img src="projects/IMG_4358.JPG" width="33%"></img>
-                <img src="projects/IMG_4365.JPG" width="33%"></img>
-                <img src="projects/IMG_4370.JPG" width="33%"></img>
-                <img src="projects/IMG_4396.JPG" width="33%"></img>
-                <img src="projects/IMG_4400.JPG" width="33%"></img>
-                <img src="projects/IMG_4403.JPG" width="33%"></img>
-            </div>
-            <div id="contacts">
-                <h2>Contact</h2>
-                <p>Email: Mr. Ryan Wasurick at <a href="mailto:rwasurick@tusd.net">rwasurick@tusd.net</a> for more information</p>
-            </div>
+                <!-- Container for the image gallery -->
+                <div class="container">
+
+                  <!-- Full-width images with number text -->
+                  <div class="mySlides">
+                      <img src="projects/IMG_4333.JPG" style="height:450px" class="centerss">
+                  </div>
+
+                  <div class="mySlides">
+                      <img src="projects/IMG_4345.JPG" style="height:450px" class="centerss">
+                  </div>
+
+                  <div class="mySlides">
+                      <img src="projects/IMG_4358.JPG" style="height:450px" class="centerss">
+                  </div>
+
+                  <div class="mySlides">
+                      <img src="projects/IMG_4365.JPG" style="height:450px" class="centerss">
+                  </div>
+
+                  <div class="mySlides">
+                      <img src="projects/IMG_4370.JPG" style="height:450px" class="centerss">
+                  </div>
+
+                  <div class="mySlides">
+                      <img src="projects/IMG_4396.JPG" style="height:450px" class="centerss">
+                  </div>
+		  <div class="mySlides">
+		      <img src="projects/IMG_4400.JPG" style="height:450px" class="centerss">
+		  </div>
+		  <div class="mySlides">
+		      <img src="projects/IMG_4403.JPG" style="height:450px" class="centerss">
+		  </div>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
         </div>
-    </body>
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4333.t.JPG" style="width:100%" onclick="currentSlide(1)" alt="Pokemon MewTwo on a Pedestal">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4345.t.JPG" style="width:100%" onclick="currentSlide(2)" alt="Perplexing Cube">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4358.t.JPG" style="width:100%" onclick="currentSlide(3)" alt="Pokemon Charizard vs Blastoise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4365.t.JPG" style="width:100%" onclick="currentSlide(4)" alt="The Mandalorian Baby Yoda">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4370.t.JPG" style="width:100%" onclick="currentSlide(5)" alt="Pokemon Gengar">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="projects/IMG_4396.t.JPG" style="width:100%" onclick="currentSlide(6)" alt="XBox Controller Stand">
+          </div>
+  	  <div class="column">
+  	    <img class="demo cursor" src="projects/IMG_4400.t.JPG" style="width:100%" onclick="currentSlide(7)" alt="Desktop Custom Designs">
+  	  </div>
+  	  <div class="column">
+  	    <img class="demo cursor" src="projects/IMG_4403.t.JPG" style="width:100%" onclick="currentSlide(8)" alt="Playstation 4 Controller Stand">
+  	  </div>
+        </div>
+      </div>
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+    </div>
+    <div id="contacts">
+      <h2>Contact</h2>
+      <p>Email: Mr. Ryan Wasurick at <a href="mailto:rwasurick@tusd.net">rwasurick@tusd.net</a> for more information</p>
+    </div>
+  </div>
+</body>
 </html>
