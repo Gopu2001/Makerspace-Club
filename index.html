@@ -56,11 +56,14 @@
           margin-right: auto;
           width: 75%;
         }
-	.centerss {
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	}
+      	.centerss {
+      	  display: block;
+      	  margin-left: auto;
+      	  margin-right: auto;
+      	}
+        .centertitle {
+          padding: 12px
+        }
         * {
           box-sizing: border-box;
         }
@@ -160,14 +163,14 @@
 
         <!-- Page content -->
         <div class="main">
-            <div id="about">
-                <h1>TRACY HIGH'S MAKERSPACE CLUB</h1>
-                <img src="octopus.gif" width=50%>
+            <div id="about" class="centertitle" style="background-color:GREEN; font-size:24px" align="center">
+                <h1>TRACY HIGH SCHOOL'S MAKERSPACE CLUB</h1>
             </div>
+            <img src="octopus.gif" width=50% class="centerss">
             <div id="services">
-                <p>You may <a href="#contacts">contact us</a> to make an appointment for your 3D printing needs.<br><br>
+                <h3>You may <a href="#contacts">contact us</a> to make an appointment for your 3D printing needs.<br><br>
                 For more information on what we have done: check out these amazing 3D prints!
-                </p>
+              </h3>
                 <!-- Container for the image gallery -->
                 <div class="container">
 
@@ -195,12 +198,24 @@
                   <div class="mySlides">
                       <img src="projects/IMG_4396.JPG" style="height:450px" class="centerss">
                   </div>
-		  <div class="mySlides">
-		      <img src="projects/IMG_4400.JPG" style="height:450px" class="centerss">
-		  </div>
-		  <div class="mySlides">
-		      <img src="projects/IMG_4403.JPG" style="height:450px" class="centerss">
-		  </div>
+		              <div class="mySlides">
+		                  <img src="projects/IMG_4400.JPG" style="height:450px" class="centerss">
+		              </div>
+		              <div class="mySlides">
+		                  <img src="projects/IMG_4403.JPG" style="height:450px" class="centerss">
+		              </div>
+                  <div class="mySlides">
+		                  <img src="projects/IMG_4509.JPG" style="height:450px" class="centerss">
+		              </div>
+                  <div class="mySlides">
+		                  <img src="projects/IMG_4511.JPG" style="height:450px" class="centerss">
+		              </div>
+                  <div class="mySlides">
+		                  <img src="projects/IMG_4513.JPG" style="height:450px" class="centerss">
+		              </div>
+                  <div class="mySlides">
+		                  <img src="projects/IMG_4514.JPG" style="height:450px" class="centerss">
+		              </div>
 
       <!-- Image text -->
       <div class="caption-container">
@@ -226,12 +241,24 @@
           <div class="column">
             <img class="demo cursor" src="projects/IMG_4396.t.JPG" style="width:100%" onclick="currentSlide(6)" alt="XBox Controller Stand">
           </div>
-  	  <div class="column">
-  	    <img class="demo cursor" src="projects/IMG_4400.t.JPG" style="width:100%" onclick="currentSlide(7)" alt="Desktop Custom Designs">
-  	  </div>
-  	  <div class="column">
-  	    <img class="demo cursor" src="projects/IMG_4403.t.JPG" style="width:100%" onclick="currentSlide(8)" alt="Playstation 4 Controller Stand">
-  	  </div>
+      	  <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4400.t.JPG" style="width:100%" onclick="currentSlide(7)" alt="Desktop Custom Designs">
+      	  </div>
+      	  <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4403.t.JPG" style="width:100%" onclick="currentSlide(8)" alt="Playstation 4 Controller Stand">
+      	  </div>
+          <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4509.t.JPG" style="width:100%" onclick="currentSlide(9)" alt="Star Wars Full-Size Soldier Mask">
+      	  </div>
+          <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4511.t.JPG" style="width:100%" onclick="currentSlide(10)" alt="Majestic Unicorn">
+      	  </div>
+          <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4513.t.JPG" style="width:100%" onclick="currentSlide(11)" alt="Tyrannosaurus Rex Skull Cup Holder">
+      	  </div>
+          <div class="column">
+      	    <img class="demo cursor" src="projects/IMG_4514.t.JPG" style="width:100%" onclick="currentSlide(12)" alt="Maintenance on 3D Printer">
+      	  </div>
         </div>
       </div>
 
@@ -265,9 +292,11 @@
         captionText.innerHTML = dots[slideIndex-1].alt;
       }
       </script>
+      <h3>
+        Of course, our only limit is your imagination!
     </div>
     <div id="contacts">
-      <h2>Contact</h2>
+      <h1>Contact</h1>
       <p>Email: Mr. Ryan Wasurick at <a href="mailto:rwasurick@tusd.net">rwasurick@tusd.net</a> for more information</p>
     </div>
   </div>
